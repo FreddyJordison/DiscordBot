@@ -1,0 +1,31 @@
+{
+  "all": [
+    "**COMANDOS GLOBAIS:**\n",
+    "\t**help**: Abre este menu\n"
+  ],
+  "admin": [
+    "**COMANDOS DE ADMIN:**\n",
+    "\t**poll** <pergunta> <respostas>: Cria poll (perguntas iniciadas por '+')\n",
+    "\t**musica** * <id's/nicknames>: Move membro(s) para canal <#426513915652997121>\n",
+    "\t**convm** * <id's/nicknames>: Move membro(s) para canal <#411301767066681374>\n",
+    "\t**recepçao** * <id's/nicknames>: Move membro(s) para canal <#189465877333147649>\n",
+    "\t**convivio** * <id's/nicknames>: Move membro(s) para canal <#416367488142409730>\n",
+    "\t**outros** * <id's/nicknames>: Move membro(s) para canal <#402178687631622146>\n",
+    "\t**espera** * <id's/nicknames>: Move membro(s) para canal <#738490285860061274>\n",
+    "\t**fun1** * <id's/nicknames>: Move membro(s) para canal <#738490118184370267>\n",
+    "\t**fun2** * <id's/nicknames>: Move membro(s) para canal <#738490184760295485>\n",
+    "\t**compa** * <id's/nicknames>: Move membro(s) para canal <#493145493862613002>\n",
+    "\t**compb** * <id's/nicknames>: Move membro(s) para canal <#674960822748971019>\n",
+    "\t**treino1** * <id's/nicknames>: Move membro(s) para canal <#411301922663038988>\n",
+    "\t**treino2** * <id's/nicknames>: Move membro(s) para canal <#411301979462303744>\n",
+    "\t**cw1** * <id's/nicknames>: Move membro(s) para canal <#189465595002093568>\n",
+    "\t**cw2** * <id's/nicknames>: Move membro(s) para canal <#402179628061556737>\n",
+    "\t**cw3** * <id's/nicknames>: Move membro(s) para canal <#411299669730394113>\n",
+	"\t**aviso** * <id/nickname><razão>: Dá um aviso ao membro\n",
+  "\t**lavisos** * <id/nickname>: Limpa avisos do membro\n",
+	"\t**say** <mensagem>: Faz o bot mandar mensagem\n",
+	"\t**ping**: Pong!\n",
+    "\t**add** <all/mod/admin>:  Adiciona comando à lista de ajuda (Não adiciona permanentemente, o host não permite)\n",
+	"\t* Caso não se mencione membro nenhum, todos os membros do canal serão movidos!\n"
+  ]
+}
