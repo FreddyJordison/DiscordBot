@@ -1,0 +1,3 @@
+{
+	"ignore": ["tempo.json", "warning.json", "cont.json", "bot.js", "rep.js"]
+}

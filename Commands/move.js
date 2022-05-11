@@ -1,323 +1,179 @@
 var cmd = async function(message, command, client, autor, mmbrs) {
+	var vc = message.member.voice.channel;
 	
-	if(message.member.voice.channel){
-		var vc = message.member.voice.channel;
-	}
-
-	var msg = "Tens de mencionar membros!";
-
-	mmbrs = message.mentions.members.array() || new Array();
-
+	var msg = " ";
+	
+	mmbrs = message.mentions.members.array();
 	
 	switch(command) {
 	
-	case "fun1":
+	case "q1":
 		if (mmbrs.length <= 0) {
 			mmbrs = vc.members.array();
 		}
 
 		for (i = 0; i < mmbrs.length; i++){
 			if (mmbrs[i].voice.channel){
-				await message.guild.member(mmbrs[i]).voice.setChannel('738490118184370267').catch();
+				await message.guild.member(mmbrs[i]).voice.setChannel('513723945070100496').catch();
 			} else {
 				mmbrs.splice(i, 1);
 			}
 		}
-		msg = `${mmbrs.length} membros movidos para <#738490118184370267>`
+		msg = `${mmbrs.length} membros movidos para <#513723945070100496>`
 		
 		break;
 	
-	case "musica":
+	case "q2":
 		if (mmbrs.length <= 0) {
-			mmbrs = vc.members.array();
+			mmbrs = client.channels.get(vc).members.array();
 		}
-
-		for (i = 0; i < mmbrs.length; i++){
-			if (mmbrs[i].voice.channel){
-				await message.guild.member(mmbrs[i]).voice.setChannel('426513915652997121').catch();
-			} else {
-				mmbrs.splice(i, 1);
-			}
-		}
-		msg = `${mmbrs.length} membros movidos para <#426513915652997121>`
 		
-		break;
-
-	case "convivio":
-		if (mmbrs.length <= 0) {
-			mmbrs = vc.members.array();
-		}
-
 		for (i = 0; i < mmbrs.length; i++){
-			if (mmbrs[i].voice.channel){
-				await message.guild.member(mmbrs[i]).voice.setChannel('416367488142409730').catch();
-			} else {
-				mmbrs.splice(i, 1);
-			}
+			await mmbrs[i].setVoiceChannel('513723976854405122').catch();
 		}
-		msg = `${mmbrs.length} membros movidos para <#416367488142409730>`
+		msg = `${mmbrs.length} membros movidos para <#513723976854405122>`
 		
 		break;
 	
-	case "convm":
+	case "q3":
 		if (mmbrs.length <= 0) {
-			mmbrs = vc.members.array();
+			mmbrs = client.channels.get(vc).members.array();
 		}
-
+		
 		for (i = 0; i < mmbrs.length; i++){
-			if (mmbrs[i].voice.channel){
-				await message.guild.member(mmbrs[i]).voice.setChannel('411301767066681374').catch();
-			} else {
-				mmbrs.splice(i, 1);
-			}
+			await mmbrs[i].setVoiceChannel('513723624276885504').catch();
 		}
-		msg = `${mmbrs.length} membros movidos para <#411301767066681374>`
+		msg = `${mmbrs.length} membros movidos para <#513723624276885504>`
 		
 		break;
 		
-	case "recepçao":
+	case "cod":
 		if (mmbrs.length <= 0) {
-			mmbrs = vc.members.array();
+			mmbrs = client.channels.get(vc).members.array();
 		}
-
+		
 		for (i = 0; i < mmbrs.length; i++){
-			if (mmbrs[i].voice.channel){
-				await message.guild.member(mmbrs[i]).voice.setChannel('189465877333147649').catch();
-			} else {
-				mmbrs.splice(i, 1);
-			}
+			await mmbrs[i].setVoiceChannel('710949129509011541').catch();
 		}
-		msg = `${mmbrs.length} membros movidos para <#189465877333147649>`
+		msg = `${mmbrs.length} membros movidos para <#710949129509011541>`
 		
 		break;
 		
-	case "outros":
+	case "gta":
 		if (mmbrs.length <= 0) {
-			mmbrs = vc.members.array();
+			mmbrs = client.channels.get(vc).members.array();
 		}
-
+		
 		for (i = 0; i < mmbrs.length; i++){
-			if (mmbrs[i].voice.channel){
-				await message.guild.member(mmbrs[i]).voice.setChannel('402178687631622146').catch();
-			} else {
-				mmbrs.splice(i, 1);
-			}
+			await mmbrs[i].voice.setChannel('710949027742744728').catch();
 		}
-		msg = `${mmbrs.length} membros movidos para <#402178687631622146>`
+		msg = `${mmbrs.length} membros movidos para <#710949027742744728>`
 		
 		break;
 	
-	case "espera":
+/*	case "isa":
 		if (mmbrs.length <= 0) {
-			mmbrs = vc.members.array();
+			mmbrs = client.channels.get(vc).members.array();
 		}
-
+		
 		for (i = 0; i < mmbrs.length; i++){
-			if (mmbrs[i].voice.channel){
-				await message.guild.member(mmbrs[i]).voice.setChannel('738490285860061274').catch();
-			} else {
-				mmbrs.splice(i, 1);
-			}
+			await mmbrs[i].setVoiceChannel('402501924999528458').catch();
 		}
-		msg = `${mmbrs.length} membros movidos para <#738490285860061274>`
+		msg = `${mmbrs.length} membros movidos para <#402501924999528458>`
 		
 		break;
 	
-	case "fun2":
+	case "isb":
 		if (mmbrs.length <= 0) {
-			mmbrs = vc.members.array();
+			mmbrs = client.channels.get(vc).members.array();
 		}
-
+		
 		for (i = 0; i < mmbrs.length; i++){
-			if (mmbrs[i].voice.channel){
-				await message.guild.member(mmbrs[i]).voice.setChannel('738490184760295485').catch();
-			} else {
-				mmbrs.splice(i, 1);
-			}
+			await mmbrs[i].setVoiceChannel('498940970356703232').catch();
 		}
-		msg = `${mmbrs.length} membros movidos para <#738490184760295485>`
+		msg = `${mmbrs.length} membros movidos para <#498940970356703232>`
 		
 		break;
 	
 	
-	case "compa":
+	case "esp":
 		if (mmbrs.length <= 0) {
-			mmbrs = vc.members.array();
+			mmbrs = client.channels.get(vc).members.array();
 		}
-
-		if (mmbrs.length > 5) return message.reply("Não podes mover mais de 5 membros para canais de Competitivo!");
 		
-		if (client.channels.cache.get('493145493862613002').members.size + mmbrs.length <= client.channels.cache.get('493145493862613002').userLimit){
-			for (i = 0; i < mmbrs.length; i++){
-				if (mmbrs[i].voice.channel){
-					await message.guild.member(mmbrs[i]).voice.setChannel('493145493862613002').catch();
-				} else {
-					mmbrs.splice(i, 1);
-				}
-			}
-			msg = `${mmbrs.length} membros movidos para <#493145493862613002>`
-		
-			break;
-		} else {
-			msg = `Canal Competitivo Alpha está cheio ou não consegue juntar todos os jogadores movidos!`
+		for (i = 0; i < mmbrs.length; i++){
+			await mmbrs[i].setVoiceChannel('414168583141064715').catch();
 		}
-			
+		msg = `${mmbrs.length} membros movidos para <#414168583141064715>`
+		
 		break;
-
 		
-	case "compb":
+	case "comp1":
 		if (mmbrs.length <= 0) {
-			mmbrs = vc.members.array();
+			mmbrs = client.channels.get(vc).members.array();
 		}
-
-		if (mmbrs.length > 5) return message.reply("Não podes mover mais de 5 membros para canais de Competitivo!");
 		
-		if (client.channels.cache.get('674960822748971019').members.size + mmbrs.length <= client.channels.cache.get('674960822748971019').userLimit){
-			for (i = 0; i < mmbrs.length; i++){
-				if (mmbrs[i].voice.channel){
-					await message.guild.member(mmbrs[i]).voice.setChannel('674960822748971019').catch();
-				} else {
-					mmbrs.splice(i, 1);
-				}
-			}
-			msg = `${mmbrs.length} membros movidos para <#674960822748971019>`
-		
-			break;
-		} else {
-			msg = `Canal Competitivo Bravo está cheio ou não consegue juntar todos os jogadores movidos!`
+		for (i = 0; i < mmbrs.length; i++){
+			await mmbrs[i].setVoiceChannel('447818685944692756').catch();
 		}
-			
+		msg = `${mmbrs.length} membros movidos para <#447818685944692756>`
+		
 		break;
-
 		
-	case "treino1":
+	case "comp2":
 		if (mmbrs.length <= 0) {
-			mmbrs = vc.members.array();
+			mmbrs = client.channels.get(vc).members.array();
 		}
-
-		if (mmbrs.length > 5) return message.reply("Não podes mover mais de 5 membros para canais de Treino!");
 		
-		if (client.channels.cache.get('411301922663038988').members.size + mmbrs.length <= client.channels.cache.get('411301922663038988').userLimit){
-			for (i = 0; i < mmbrs.length; i++){
-				if (mmbrs[i].voice.channel){
-					await message.guild.member(mmbrs[i]).voice.setChannel('411301922663038988').catch();
-				} else {
-					mmbrs.splice(i, 1);
-				}
-			}
-			msg = `${mmbrs.length} membros movidos para <#411301922663038988>`
-		
-			break;
-		} else {
-			msg = `Canal Treino 1 está cheio ou não consegue juntar todos os jogadores movidos!`
+		for (i = 0; i < mmbrs.length; i++){
+			await mmbrs[i].setVoiceChannel('442129692414443531').catch();
 		}
-			
+		msg = `${mmbrs.length} membros movidos para <#442129692414443531>`
+		
 		break;
-
 		
-	case "treino2":
+	case "cw":
 		if (mmbrs.length <= 0) {
-			mmbrs = vc.members.array();
+			mmbrs = client.channels.get(vc).members.array();
 		}
-
-		if (mmbrs.length > 5) return message.reply("Não podes mover mais de 5 membros para canais de Treino!");
 		
-		if (client.channels.cache.get('411301979462303744').members.size + mmbrs.length <= client.channels.cache.get('411301979462303744').userLimit){
+		if (mmbrs.length > 5) return message.reply("Não podes mover mais de 5 membros para canais de CW!");
+		
+		if (client.channels.get('405321237506818050').members.size + mmbrs.length <= client.channels.get('405321237506818050').userLimit){
 			for (i = 0; i < mmbrs.length; i++){
-				if (mmbrs[i].voice.channel){
-					await message.guild.member(mmbrs[i]).voice.setChannel('411301979462303744').catch();
-				} else {
-					mmbrs.splice(i, 1);
-				}
+				await mmbrs[i].setVoiceChannel('405321237506818050').catch();
 			}
-			msg = `${mmbrs.length} membros movidos para <#411301979462303744>`
+			msg = `${mmbrs.length} membros movidos para <#405321237506818050>`
+			
+			break;
+			
+		} else if (client.channels.get('413819595695194134').members.size + mmbrs.length <= client.channels.get('413819595695194134').userLimit){
+			for (i = 0; i < mmbrs.length; i++){
+				await mmbrs[i].setVoiceChannel('413819595695194134').catch();
+			}
+			msg = `${mmbrs.length} membros movidos para <#413819595695194134>`
+			
+			break;
+			
+		/*} else if (client.channels.get('417804753125507072').members.size + mmbrs.length <= client.channels.get('417804753125507072').userLimit){
+			for (i = 0; i < mmbrs.length; i++){
+				await mmbrs[i].setVoiceChannel('417804753125507072').catch();
+			}
+			msg = `${mmbrs.length} membros movidos para <#417804753125507072>`
 			
 			break;
 			
 		} else {
-			msg = `Canal Treino 2 está cheio ou não consegue juntar todos os jogadores movidos!`
-		}
-		
-		break;
-
-	case "cw1":
-		if (mmbrs.length <= 0) {
-			mmbrs = vc.members.array();
-		}
-
-		if (mmbrs.length > 5) return message.reply("Não podes mover mais de 5 membros para canais de Clan War!");
-		
-		if (client.channels.cache.get('189465595002093568').members.size + mmbrs.length <= client.channels.cache.get('189465595002093568').userLimit){
 			for (i = 0; i < mmbrs.length; i++){
-				if (mmbrs[i].voice.channel){
-					await message.guild.member(mmbrs[i]).voice.setChannel('189465595002093568').catch();
-				} else {
-					mmbrs.splice(i, 1);
-				}
+				await mmbrs[i].setVoiceChannel('414168583141064715').catch();
 			}
-			msg = `${mmbrs.length} membros movidos para <#189465595002093568>`
-			
-			break;
-			
-		} else {
-			msg = `Canal Clan War 1 está cheio ou não consegue juntar todos os jogadores movidos!`
+			msg = `Todos os canais de cw estão cheios! ${mmbrs.length} membros movidos para <#414168583141064715>`
 		}
 		
 		break;
-
-	case "cw2":
-		if (mmbrs.length <= 0) {
-			mmbrs = vc.members.array();
-		}
-
-		if (mmbrs.length > 5) return message.reply("Não podes mover mais de 5 membros para canais de Clan War!");
-		
-		if (client.channels.cache.get('402179628061556737').members.size + mmbrs.length <= client.channels.cache.get('402179628061556737').userLimit){
-			for (i = 0; i < mmbrs.length; i++){
-				if (mmbrs[i].voice.channel){
-					await message.guild.member(mmbrs[i]).voice.setChannel('402179628061556737').catch();
-				} else {
-					mmbrs.splice(i, 1);
-				}
-			}
-			msg = `${mmbrs.length} membros movidos para <#402179628061556737>`
-			
-			break;
-			
-		} else {
-			msg = `Canal Clan War 2 está cheio ou não consegue juntar todos os jogadores movidos!`
-		}
-		
-		break;
-
-	case "cw3":
-		if (mmbrs.length <= 0) {
-			mmbrs = vc.members.array();
-		}
-
-		if (mmbrs.length > 5) return message.reply("Não podes mover mais de 5 membros para canais de Clan War!");
-		
-		if (client.channels.cache.get('411299669730394113').members.size + mmbrs.length <= client.channels.cache.get('411299669730394113').userLimit){
-			for (i = 0; i < mmbrs.length; i++){
-				if (mmbrs[i].voice.channel){
-					await message.guild.member(mmbrs[i]).voice.setChannel('411299669730394113').catch();
-				} else {
-					mmbrs.splice(i, 1);
-				}
-			}
-			msg = `${mmbrs.length} membros movidos para <#411299669730394113>`
-			
-			break;
-			
-		} else {
-			msg = `Canal Clan War 3 está cheio ou não consegue juntar todos os jogadores movidos!`
-		}
-		
-		break;
-
-	}
+*/	}
 	
-	return client.channels.cache.get("817917451471028234").send(`${autor}, ${msg}`);
+	return message.reply(msg);
 }
 
 exports.cmd = cmd;

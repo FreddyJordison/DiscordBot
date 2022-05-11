@@ -15,7 +15,7 @@ var poll = async function(usern, message, args, autor, Discord, client) {
 	usern = autor.nickname;
 	if(usern == null) usern = message.author.username;
 	
-	var autor = 'wG Poll'
+	var autor = 'MasterBot Poll'
 	
 	if (args[0] == "edit") {
 		poll1[message.author.id].delete()
@@ -27,11 +27,11 @@ var poll = async function(usern, message, args, autor, Discord, client) {
 				if (t === 0){
 					pol = pol + "**";
 					tempm = tempm.slice(1);
-					pol1 = pol1 + "" + rect[t] + " " + tempm;
+					pol1 = pol1 + "" + rect[t] + tempm;
 					t++;
 				} else {
 					tempm = tempm.slice(1);
-					pol1 = pol1 + "\n" + rect[t] + " " + tempm;
+					pol1 = pol1 + "\n" + rect[t] + tempm;
 					t++;
 				}
 			} else if (t === 0) {
@@ -50,11 +50,11 @@ var poll = async function(usern, message, args, autor, Discord, client) {
 	
 	
 	
-		embed = new Discord.MessageEmbed()
+		embed = new Discord.RichEmbed()
 			.setAuthor(`${autor}`)
-			.setThumbnail(client.user.avatarURL())
+			.setThumbnail(client.user.avatarURL)
 			.setColor(0x00AE86)
-			.addField(`\u200b`, `\u200b`)
+			.addBlankField(true)
 			.addField(`${pol}`,
 				`${pol1}`)
 			.setFooter(`${usern}`);	
@@ -74,11 +74,11 @@ var poll = async function(usern, message, args, autor, Discord, client) {
 			if (t === 0){
 				pol = pol + "**";
 				tempm = tempm.slice(1);
-				pol1 = pol1 + "" + rect[t] + " " + tempm;
+				pol1 = pol1 + "" + rect[t] + tempm;
 				t++;
 			} else {
 				tempm = tempm.slice(1);
-				pol1 = pol1 + "\n" + rect[t] + " " + tempm;
+				pol1 = pol1 + "\n" + rect[t] + tempm;
 				t++;
 			}
 		} else if (t === 0) {
@@ -97,12 +97,12 @@ var poll = async function(usern, message, args, autor, Discord, client) {
 	
 	
 	
-	embed = new Discord.MessageEmbed()
+	embed = new Discord.RichEmbed()
 		.setAuthor(`${autor}`)
-		.setThumbnail(client.user.avatarURL())
+		.setThumbnail(client.user.avatarURL)
 		.setColor(0x00AE86)
-		.addField(`\u200b`, `\u200b`)
-		.addField( `${pol}`,
+		.addBlankField(true)
+		.addField(`${pol}`,
 			`${pol1}`)
 		.setFooter(`${usern}`);	
 	message.channel.send(`@everyone`);

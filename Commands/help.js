@@ -4,11 +4,10 @@ var help = function(message, args, ajuda, fs) {
 	const help2 = ajuda["all"]
 			
 	
-	var msg = `${message.author}: \n\n`
-	msg = msg+">>> "
+	var msg = " "
 	
 	if (!args[0]){
-		if(message.member.hasPermission('MANAGE_NICKNAMES', true)){
+		if(message.member.hasPermission('ADMINISTRATOR', true)){
 			for (i = 0;i < help1.length;i++){
 				msg += help1[i]
 			}
@@ -21,13 +20,24 @@ var help = function(message, args, ajuda, fs) {
 				msg += help2[i]
 			}
 			
-			msg += "Prefixo de comando: +"
+			msg += "Prefixo de comando: i'"
 			
 			return message.channel.send(msg);
 		}
 	} else {
 		var msg = 'Ajuda comando +'+args[0];
 		switch(args[0]) {
+			case "user":
+			case "man":
+			case "clan":
+				msg = msg+
+					'```Pode ser usado com ID ou Nickname. Ex:\n\n	ID: +'+
+					args[0]+
+					' 437711381320695810\n\n	Nickname: i\''+
+					args[0]+
+					' @MasterBot#8278 ```';
+					
+				break;
 				
 			case "poll":
 				msg = msg+
@@ -42,37 +52,57 @@ var help = function(message, args, ajuda, fs) {
 					
 				break;
 			
-			case "fun1":
-			case "fun2":
-			case "convm":
-			case "musica":
-			case "espera":
-			case "recepçao":
-			case "outros":
-			case "compa":
-			case "compb":
-			case "treino1":
-			case "treino2":
-			case "cw1":
-			case "cw2":
-			case "cw3":
+			case "Q1":
+			case "Q2":
+			case "Q3":
 				msg = msg+
 					'```Move membros para canal de voz.\n\nPode ser usado com e sem argumentos('+
 					'i.e. Podes mencionar os utilizadores a mover)'+
 					'\n\nCaso nenhum utilizador seja mencionado, todos os membros do mesmo canal de voz serão movidos'+
-					'\n\n	Ex: +'+args[0]+' @wG.Bot#8278\n\n'+
+					'\n\n	Ex: +'+args[0]+' @MasterBot#8278\n\n'+
 					'Ao mencionar, só este membro será movido. Caso não haja menção nenhuma, todos serão movidos.```';
 				
 				break;
 				
+			case "twitch":
+				msg = msg+
+					'```Adiciona canal twitch a #twitch.\n\n'+
+					'Ex: +twitch @MasterBot#8278  https://www.twitch.tv/MasterBot ```'
+				
+				break;
+				
+			/*case "aviso":
+				msg	= msg+
+					'```Dá aviso ao membro.\n\nPode ser usado com ID ou Nickname.\n'+
+					'Para todos os avisos, tem de se dar uma razão!\n\n'+
+					'Ex:\n\n	ID: i\'aviso 429624717222215721 Razão para o aviso.'+
+					'\n	Nickname: i\'aviso @Alliance-#4854 Razão para o aviso.\n\n'+
+					'Ao 3º aviso, será aplicada uma punição:\n'+
+					'	Membro do clan fica em castigo, até ser retirado (castigo tem de ser retirado por um gerente ou admin)\n'+
+					'	Não membro do clan é kickado do servidor. Poderá entrar mais tarde, com convite.```'
+					
+				break;
+				*/
+			case "poker":
+				msg = msg+
+					'```Usar comando +poker join para entrar ou *+poker leave* para sair.\n\n'+
+					'Durante o jogo usar:\n'+
+					'\t+fold: Desiste do jogo\n'+
+					'\t+raise <valor>: Aumente a aposta\n'+
+					'\t+call: Iguala aposta feita pelo jogador anterior\n'+
+					'\t+check: Passa a vez\n'+
+					'\t+credits: Verifica os créditos```'
+					
+				break;
+				
 			case "add":
-				if(!message.member.hasPermission('CHANGE_NICKNAME', true)) break;
+				if(!message.member.hasPermission('ADMINISTRATOR', true)) break;
 				if(!args[1] || (args[1] != 'all' && args[1] != 'man')){
 					msg	= msg+
 						'```Adiciona comando à lista de ajuda.\n\nTem de se identificar que tipo de comando é.\n'+
 						'Tipos de comando:\n\tall: Global\n\tman: Gerente\n\n'+
 						'Variáveis a usar com o comando adicionado têm de ser iniciadas por \'<\'\n\n'+
-						'Ex: +help add man ban <id/nickname> <razao> Bane o membro\n\n'+
+						'Ex: +help add Man ban <id/nickname> <razao> Bane o membro\n\n'+
 						'Formatação de comando:\n'+
 						'\t<tipo de comando> <nome do comando> <variáveis> <descriçao>```'
 						
@@ -106,15 +136,6 @@ var help = function(message, args, ajuda, fs) {
 				if (err) console.log(err);
 				});
 				
-				break;
-				
-			case "aviso":
-				msg	= msg+
-					'```Dá aviso ao membro.\n\nPode ser usado com ID ou Nickname.\n'+
-					'Para todos os avisos, tem de se dar uma razão!\n\n'+
-					'Ex:\n\n	ID: +aviso 429624717222215721 Razão para o aviso.'+
-					'\n	Nickname: +aviso @wG.Bot#4854 Razão para o aviso.```'
-					
 				break;
 			
 			default:

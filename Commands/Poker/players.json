@@ -1,0 +1,72 @@
+{
+  "435523993936592928": [
+    100,
+    "./Commands/Poker/AC.png",
+    "./Commands/Poker/2E.png",
+    2,
+    [
+      "A",
+      "C"
+    ],
+    [
+      "2",
+      "E"
+    ]
+  ],
+  "397059866071662602": [
+    100,
+    "./Commands/Poker/6P.png",
+    "./Commands/Poker/3O.png",
+    2,
+    [
+      "6",
+      "P"
+    ],
+    [
+      "3",
+      "O"
+    ]
+  ],
+  "347865798850773002": [
+    100,
+    "./Commands/Poker/AE.png",
+    "./Commands/Poker/2E.png",
+    2,
+    [
+      "A",
+      "E"
+    ],
+    [
+      "2",
+      "E"
+    ]
+  ],
+  "405452818070110210": [
+    100,
+    "./Commands/Poker/JC.png",
+    "./Commands/Poker/3P.png",
+    2,
+    [
+      "J",
+      "C"
+    ],
+    [
+      "3",
+      "P"
+    ]
+  ],
+  "437019057351557121": [
+    100,
+    "./Commands/Poker/9O.png",
+    "./Commands/Poker/10P.png",
+    2,
+    [
+      "9",
+      "O"
+    ],
+    [
+      "10",
+      "P"
+    ]
+  ]
+}

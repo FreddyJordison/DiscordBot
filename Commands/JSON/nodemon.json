@@ -1,0 +1,3 @@
+{
+	"ignore": ["./Commands/JSON/tempo.json", "./Commands/JSON/warning.json", "./Commands/JSON/cont.json", "bot.js", "rep.js", ".Commands/Poker/poker.json"]
+}
